@@ -1,0 +1,69 @@
+body {
+    width: 99%;
+    background-image:url('../images/bg2.svg');
+    overflow-x:hidden;
+}
+
+#top{
+    height:100%;
+    display:block;
+}
+
+h1 {
+    color: #fff;
+    font-size: 4em;
+    opacity: 1;
+    font-weight: 900;
+    text-align:center;
+    font-family: 'Raleway';
+    letter-spacing: 5px;
+}
+
+h2 {
+    color: #fff;
+    font-size: 2em;
+    opacity: 0.5;
+    text-align:center;
+    font-family: 'Raleway';
+    letter-spacing: 3px;
+}
+#links {
+    text-align:center;
+    letter-spacing: 20px;
+    font-size: 3em;
+}
+
+
+#links a{
+        color: #fff;
+}
+
+[type="git"]:hover{
+    color: #000;
+    cursor:pointer;
+}
+
+[type="fb"]:hover{
+    color: #3B5999;
+    cursor:pointer;
+}
+
+[type="twit"]:hover{
+    color: #55ACEE;
+    cursor:pointer;
+}
+
+[type="linkedin"]:hover{
+    color: #4875B4;
+    cursor:pointer;
+}
+
+#below{
+    margin-top: 10%;
+    color: #fff;
+    text-align:center;
+}
+
+#below i{
+    font-size: 5em;
+}
