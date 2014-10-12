@@ -1,41 +1,133 @@
 body {
-    width: 99%;
-    background-image:url('../images/bg2.svg');
+    width: 100%;
+    font-family: 'Raleway', calibri;
     overflow-x:hidden;
+    margin: 0;
+    background-color:rgba(0, 0, 0,0);
+}
+@media only screen and (max-width : 320px)  {
+  #data img {
+    float:none;
+  }
+}
+/*************
+Top
+**************/
+#menu{
+    width:100%;
+    text-align:center;
+    margin-top:-110px;
+    top:0;
+    z-index: 1000;
+    position:fixed;
+    webkit-transition: all .4s ease-in 0s;
+    -moz-transition: all .4s ease-in 0s;
+    -ms-transition: all .4s ease-in 0s;
+    -o-transition: all .4s ease-in 0s;
+    transition: all .4s ease-in 0s;
+}
+
+#menu.state{
+    height: 75px;
+    top: 110px;
+    width:100%;
+    background-color:rgba(0, 0, 0, 0.7);
+}
+
+#menu ul{
+    list-style:none;
+}
+
+#menu ul li{
+    display:inline-block;
+    padding: 10px 20px;
+     margin: 0px 5%;
+    color:#fff;
+    border-radius: 20px;
+    -moz-border-radius:20px;
+    -webkit-border-radius: 20px;
+}
+#menu ul li:hover {
+    background-color:rgba(0, 0, 0, 0.9);
+    cursor:pointer;
+}
+#menu #close {
+    color:#fff;
+    font-size: 30px;
+    margin: 15px 18px;
+    padding: 5px 7px;
+    float:right;
+    background-color:rgba(0, 0, 0, 0.9);
+    border-radius: 10px;
+    -moz-border-radius:10px;
+    -webkit-border-radius: 10px;
+}
+
+#topper {
+    background-image:url('../images/bg2.svg');
+    padding-top:1%;
 }
 
 #top{
-    height:100%;
+    height:cover;
     display:block;
+    text-align:center;
+    background-color:rgba(0, 0, 0, 0.2);
+}
+
+#header{
+    font-size: 2em;
+    margin: 0px 20px 20px 20px;
+}
+
+#header #menuopen{
+    float:right;
+}
+ #header a{
+    color: #fff;
+}
+#data img{
+    display:inline-block;
+    width: 200px;
+    float:right;
+    border-radius:50%;
+    margin:2%;
+    vertical-align:bottom;
 }
 
 h1 {
     color: #fff;
+    padding-top:0.7em;
     font-size: 4em;
+    display:inline-block;
     opacity: 1;
     font-weight: 900;
     text-align:center;
-    font-family: 'Raleway';
+    font-family: 'Raleway', calibri;
+    margin-top:0;
     letter-spacing: 5px;
 }
 
 h2 {
     color: #fff;
     font-size: 2em;
-    opacity: 0.5;
+    opacity: 0.75;
     text-align:center;
-    font-family: 'Raleway';
+    font-family: 'Raleway', calibri;
     letter-spacing: 3px;
 }
+
 #links {
     text-align:center;
-    letter-spacing: 20px;
+    background-color:rgba(255, 0, 0, 0.5);
     font-size: 3em;
 }
 
-
 #links a{
-        color: #fff;
+    color: #fff;
+    margin: 20px;
+    padding:0;
+    
 }
 
 [type="git"]:hover{
@@ -58,13 +150,30 @@ h2 {
     cursor:pointer;
 }
 
+#links a:hover i{
+    vertical-align:bottom;
+}
+
+#bio{
+    padding: 1% 10%;
+    text-align:justify;
+    letter-spacing: 1px;
+    line-height:2.5em;
+     background-color:rgba(0, 100, 255, 0.4);
+}
+
 #below{
-    margin-top: 10%;
-    color: #fff;
+    margin-top: 2%;
     text-align:center;
+}
+
+#below h2,
+#bio h2{
+     color: #000;
 }
 
 #below i{
     font-size: 5em;
     color: #FFFF00;
+    
 }

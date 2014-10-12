@@ -20,17 +20,41 @@
 
   </head>
   <body>
-      <div id="top">
-          <h1>Mahir Kothary</h1>
-          <h2>University of Washington Class of 2017</h2>
-          <div id="links">
-              <a href="http://github.com/mahirk" target="_git"><i type="git" class="fa fa-github-square" ></i></a>
-              <a href="http://facebook.com/mahir.kothary"  target="_fb"><i type="fb" class="fa fa-facebook-square"></i></a>
-              <a href="http://twitter.com/mahirk95"  target="_twit"><i type="twit" class="fa fa-twitter-square"></i></a>
-              <a href="http://linkedin.com/in/mahirkothary/"  target="_liked"><i type="linkedin" class="fa fa-linkedin-square" onclick=""></i></a>
-          </div>          
+      <div id="menu">
+          <a href="#" id="close" onclick="$('#menu').removeClass('state')"><i class="fa fa-times"></i></i></a>
+          <ul>
+              <li><i class="fa fa-home"></i> Home</li>
+              <li><i class="fa fa-folder"></i> Projects</li>
+              <li><i class="fa fa-users"></i> Work</li>
+              <li><i class="fa fa-database"></i> About</li>
+          </ul>
+          
       </div>
+       <div id="topper">
+          <div id="header">              
+                  <a href="mailto:m.kothary95@gmail.com"><i class="fa fa-envelope"></i></a>
+                  <a href="#" onclick="$('#menu').addClass('state')"><i class="fa fa-th-large" id="menuopen"></i></a>
+          </div>
+          <div id="top">
+              <div id="data">
+                  <img src="images/mahir.jpg"/>
+                  <h1>Mahir Kothary</h1>
+              </div>
+              <h2>University of Washington Class of 2017</h2>
+              <div id="links">
+                  <a href="http://github.com/mahirk" target="_git"><i type="git" class="fa fa-github-square" ></i></a>
+                  <a href="http://facebook.com/mahir.kothary"  target="_fb"><i type="fb" class="fa fa-facebook-square"></i></a>
+                  <a href="http://twitter.com/mahirk95"  target="_twit"><i type="twit" class="fa fa-twitter-square"></i></a>
+                  <a href="http://linkedin.com/in/mahirkothary/"  target="_liked"><i type="linkedin" class="fa fa-linkedin-square" onclick=""></i></a>
+              </div>          
+          </div>
+       </div>
+    <div id="bio">
+        <h2>A little bit about me.</h2>
+        <p>I am a sophomore pursuing Computer Science with a minor in Entrepreneurship at the University of Washington. I have previously interned at Viacom, VMware and IBM and am currently on the executive board for DubHacks. I usually love, taking on programming as well as hardware projects - with an interest in IoT and BigData, EDM and tend to revel in blending art and technology in digital photography.</p>
+    </div>
       <div id="below">
+          
           <i class="fa fa-exclamation-triangle"></i>
           <h2>Stay tuned for more updates on the website!</h2>
       </div>
