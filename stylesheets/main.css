@@ -5,10 +5,30 @@ body {
     margin: 0;
     background-color:rgba(0, 0, 0,0);
 }
-@media only screen and (max-width : 320px)  {
+@media only screen and (min-width : 320px) and (max-width : 480px) {
   #data img {
-    float:none;
+    float: none !important;
   }
+  #menu{
+    margin-top: -160px!important;
+    height:0px!important;
+  }
+  #menu.state{
+    height: 180px!important;
+    top: 150px!important;
+  }
+  #menu ul li{
+    display:block!important;
+  }
+  #menu ul{
+    margin-right:40px;
+  }
+  #links{
+    font-size: 2em!important;
+  }
+  #bio{
+    letter-spacing: normal!important;  
+}
 }
 /*************
 Top
@@ -159,7 +179,7 @@ h2 {
     text-align:justify;
     letter-spacing: 1px;
     line-height:2.5em;
-     background-color:rgba(0, 100, 255, 0.4);
+     background-color:rgba(0, 200, 245, 0.2);
 }
 
 #below{
