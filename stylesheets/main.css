@@ -179,7 +179,7 @@ h2 {
     text-align:justify;
     letter-spacing: 1px;
     line-height:2.5em;
-     background-color:rgba(0, 200, 245, 0.2);
+     background-color:rgba(0, 100, 245, 0.2);
 }
 
 #below{
@@ -196,4 +196,9 @@ h2 {
     font-size: 5em;
     color: #FFFF00;
     
+}
+#bio p a{
+    color:#fff;
+    text-decoration:none;
+    font-weight:bold;
 }
