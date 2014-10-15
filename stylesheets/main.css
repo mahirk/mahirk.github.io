@@ -3,6 +3,7 @@ body {
     font-family: 'Raleway', calibri;
     overflow-x:hidden;
     margin: 0;
+    height:cover;
     background-color:rgba(0, 0, 0,0);
 }
 @media only screen and (min-width : 320px) and (max-width : 768px) {
@@ -27,7 +28,7 @@ body {
     font-size: 2em!important;
   }
   #bio{
-    letter-spacing: normal!important;  
+    letter-spacing: normal!important;
 }
 }
 /*************
@@ -89,7 +90,7 @@ Top
 }
 
 #top{
-    height:cover;
+    height:100%;
     display:block;
     text-align:center;
     background-color:rgba(0, 0, 0, 0.2);
@@ -106,6 +107,7 @@ Top
  #header a{
     color: #fff;
 }
+
 #data img{
     display:inline-block;
     width: 200px;
@@ -147,7 +149,7 @@ h2 {
     color: #fff;
     margin: 20px;
     padding:0;
-    
+
 }
 
 [type="git"]:hover{
@@ -175,7 +177,7 @@ h2 {
 }
 
 #bio{
-    padding: 1% 10%;
+    padding: 0.35% 10%;
     text-align:justify;
     letter-spacing: 1px;
     line-height:2.5em;
@@ -195,7 +197,7 @@ h2 {
 #below i{
     font-size: 5em;
     color: #FFFF00;
-    
+
 }
 #bio p a{
     color:#fff;
