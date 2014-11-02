@@ -14,6 +14,10 @@ body {
     margin-top: -160px!important;
     height:0px!important;
   }
+  .block {
+    display: block!important;
+    width: 100%!important;
+  }
   #menu.state{
     height: 180px!important;
     top: 150px!important;
@@ -24,12 +28,15 @@ body {
   #menu ul{
     margin-right:40px;
   }
+  #menu a {
+    text-decoration: none;
+  }
   #links{
     font-size: 2em!important;
   }
   #bio{
     letter-spacing: normal!important;
-}
+  }
 }
 /*************
 Top
@@ -215,4 +222,77 @@ Projects
 
 #prjectpage #topper {
   background: none;
+}
+
+#projectshead h1{
+  width: 100%;
+  text-align:center;
+  -webkit-margin-before: 0;
+  -webkit-margin-after: 0.5em;
+  padding-top: 0.2em;
+}
+
+#pjmain{
+  width: 100%;
+  text-align:center;
+}
+
+#projects{
+  margin: 3% 5%;
+}
+
+.block {
+  width: 18%;
+  margin: 3%;
+  text-align:center;
+  display: inline-block;
+}
+.block img {
+  height: 80%;
+  -webkit-border-radius:30%;
+  -moz-border-radius: 30%;
+  -o-border-radius: 30%;
+}
+/*************************************************
+Tags
+*************************************************/
+
+tag {
+    display: inline-block;
+    -webkit-border-radius:4px;
+    -moz-border-radius: 4px;
+    -o-border-radius: 4px;
+    padding: 4px 7px 4px 7px;
+    margin: 8px;
+    color: #fff;
+    width: auto;
+    background-color: #333;
+}
+
+#pjmain tag{
+    cursor:pointer;
+}
+
+tag[data-filter = "paper"] {
+    background-color: #31B404;
+}
+
+tag[data-filter = "app"] {
+    background-color: #FF8000;
+}
+
+tag[data-filter = "web"] {
+    background-color: #B40431;
+}
+
+tag[data-filter = "hardware"] {
+    background-color: #02A7DE;
+}
+
+tag[data-filter = "software"] {
+    background-color: #DF0101;
+}
+
+tag[data-filter = "fp"] {
+    background-color: #333;
 }
