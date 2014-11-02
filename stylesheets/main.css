@@ -204,3 +204,15 @@ h2 {
     text-decoration:none;
     font-weight:bold;
 }
+
+/******************************
+Projects
+******************************/
+
+#prjectpage{
+  background: url('../images/bggrey.png');
+}
+
+#prjectpage #topper {
+  background: none;
+}
