@@ -17,6 +17,7 @@ body {
   .block {
     display: block!important;
     width: 100%!important;
+    margin-top: 50px!important;
   }
   #menu.state{
     height: 180px!important;
@@ -224,7 +225,8 @@ Projects
   background: none;
 }
 
-#projectshead h1{
+#projectshead h1,
+#workhead h1{
   width: 100%;
   text-align:center;
   -webkit-margin-before: 0;
@@ -295,4 +297,50 @@ tag[data-filter = "software"] {
 
 tag[data-filter = "fp"] {
     background-color: #333;
+}
+
+/******************************************
+Work
+******************************************/
+#workex{
+  width: 90%!important;
+  margin-right: auto!important;
+  margin-left: auto!important;
+
+}
+.vco-toolbar {
+  display: none;
+}
+.text p.first{
+  margin-top: 5%!important;
+  text-align:center!important;
+  width: 100%;
+}
+.storyjs-embed{
+  border-radius: 10px!important;
+  -webkit-border-radius: 10px!important;
+}
+
+.vco-navigation{
+  height: 101px!important;
+}
+
+.container .date {
+  margin-bottom: 20px!important;
+}
+.content-container .text {
+  width: 65%!important;
+  margin-left: 2%!important;
+}
+.content-container img{
+  border: none!important;
+}
+
+.media-shadow:before,
+.media-shadow:after{
+  -webkit-box-shadow:none!important;
+  box-shadow: none!important;
+}
+.caption{
+  text-align: center!important;
 }
