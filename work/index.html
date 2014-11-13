@@ -8,6 +8,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
     <link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
     <link rel="icon" href="/images/transparent.png">
+    <link href='/stylesheets/timeline.css' rel='stylesheet' type='text/css'>
+
       <link rel="stylesheet" type="text/css" href="/stylesheets/font-awesome-4.2.0/css/font-awesome.css">
       <script type="text/javascript" src="http://cdn.knightlab.com/libs/timeline/latest/js/storyjs-embed.js"></script>
     <script src="/javascripts/respond.js"></script>
@@ -25,8 +27,9 @@
           $('#menu').addClass('state');
           createStoryJS({
               type:       'timeline',
-              width:      '100',
+              width:      '800',
               height:     '450',
+              start_zoom_adjust:  '0',
               font: 'Pacifico-Arimo',
               source:     'timeline.json',
               embed_id:   'workex'
@@ -40,7 +43,7 @@
   </head>
   <body id="prjectpage">
       <div id="menu">
-          <a href="#" id="close" onclick="$('#menu').removeClass('state')"><i class="fa fa-times"></i></i></a>
+          <a href="#" id="close" onclick="$('#menu').removeClass('state')"><i class="fa fa-level-up"></i></i></a>
           <ul>
               <a href="/"><li><i class="fa fa-home"></i> Home</li></a>
               <a href="/projects/"><li><i class="fa fa-folder"></i> Projects</li></a>
@@ -58,6 +61,7 @@
       <div id="workhead">
         <h1>Work</h1>
       </div>
+
       <div id="workex">
       </div>
        <script async="" src="//www.google-analytics.com/analytics.js"></script>
