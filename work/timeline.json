@@ -5,7 +5,7 @@
 		"headline":"<i class='fa fa-users'></i> Work Experiences",
 		"type":"default",
 		"startDate":"2010",
-		"text": "<blockquote class='first'> <i>\"Sometimes it's the journey that teaches you a lot about your destination\".</i><br/> - Drake</blockquote>",
+		"text": "<blockquote class='first'> <i>\"Sometimes it's the journey that teaches you a lot about your destination\".</i><br/></blockquote>",
 
 		"date": [
     		{

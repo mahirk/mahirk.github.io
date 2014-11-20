@@ -232,7 +232,8 @@ Projects
 }
 
 #projectshead h1,
-#workhead h1{
+#workhead h1,
+#abouthead h1{
   width: 100%;
   text-align:center;
   -webkit-margin-before: 0;
