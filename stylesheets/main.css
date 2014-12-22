@@ -1,11 +1,13 @@
 body {
     width: 100%;
     font-family: 'Raleway', calibri;
+    background-image:url('../images/bg2.svg');
     overflow-x:hidden;
     margin: 0;
     height:cover;
     background-color:rgba(0, 0, 0,0);
 }
+
 @media only screen and (min-width : 320px) and (max-width : 768px) {
   #data img {
     float: none !important;
@@ -93,12 +95,11 @@ Top
 }
 
 #topper {
-    background-image:url('../images/bg2.svg');
+    height: inherit;
     padding-top:1%;
 }
 
 #top{
-    height:100%;
     display:block;
     text-align:center;
     background-color:rgba(0, 0, 0, 0.2);
@@ -195,7 +196,8 @@ h2 {
     text-align:justify;
     letter-spacing: 1px;
     line-height:2.5em;
-     background-color:rgba(0, 100, 245, 0.2);
+    background-color:rgba(0, 100, 245, 0.2);
+    height: 100%;
 }
 
 #below{

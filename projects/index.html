@@ -1,5 +1,5 @@
 <!doctype html>
-<html>
+<html ng-app="projectStore">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
@@ -9,6 +9,8 @@
     <link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
     <link rel="icon" href="/images/transparent.png">
       <link rel="stylesheet" type="text/css" href="/stylesheets/font-awesome-4.2.0/css/font-awesome.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.8/angular.min.js"></script>
+    <script src="app.js"></script>
     <script src="/javascripts/respond.js"></script>
     <!--[if lt IE 9]>
       <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -30,7 +32,7 @@
 
     </script>
   </head>
-  <body id="prjectpage">
+  <body id="prjectpage" ng-controller="StoreController as store">
       <div id="menu">
           <a href="#" id="close" onclick="$('#menu').removeClass('state')"><i class="fa fa-level-up"></i></i></a>
           <ul>
@@ -59,68 +61,14 @@
         <tag data-filter="paper">Papers</tag>
         <tag data-filter="fp">Personal Projects</tag>
       </div>
-      <div id="projects">
-        <div id="pro1" class="block">
-          <img src="/images/autix.png"/>
-          <h3>AuTix</h3>
-          <p>Android Developer. Created a promotional treasure hunt application for store owners based on Maps API. Placed in the top 5 at Angel Hack Seattle</p>
+        <div id="projects">
+          <!--automate with Angular-->
+          <div class="block" ng-repeat="project in store.projects">
+            <img ng-src="{{project.img}}"/>
+            <h3>{{project.name}}</h3>
+            <p>{{project.data}}</p>
+          </div>
         </div>
-        <div id="pro2" class="block">
-          <img src="/images/Chowdown.png"/>
-          <h3>Chowdown</h3>
-          <p>Helps control the quantum of ‘Husky’ money spent on food by providing quarterly estimates. Built a Parse Backend with JS and (partially) Ruby on Rails </p>
-        </div>
-        <div id="pro3" class="block">
-          <img src="/images/pathify.jpg"/>
-          <h3>Pathify</h3>
-          <p>A supplement to general advising, based on selected categories and majors, it provides data on them. Used JS to create the selection algorithm.</p>
-        </div>
-        <div id="pro4" class="block">
-          <img src="/images/hc.png"/>
-          <h3>HackerCollective/HH</h3>
-          <p>Part of a team accumulating all programming resources for developers. Responsible for organzing and writing data for Android, JS and Chrome Ext.</p>
-        </div>
-        <div id="pro1" class="block">
-          <img src="/images/catlyft.png"/>
-          <h3>CatLyft</h3>
-          <p>An app which can be used to rent cats in the area, charged per rental w/ PAWS Shelter i.e. Lyft for Cats (Learning Project for CodeDay 2014)</p>
-        </div>
-        <div id="pro2" class="block">
-          <img src="/images/flc.jpeg"/>
-          <h3>Fine 'Linnen' Company</h3>
-          <p>Revamped according to designs provided; used SEO optimization to increase page hits. Increased sales and compliments noted.</p>
-        </div>
-        <div id="pro3" class="block">
-          <img src="/images/SUW.jpg"/>
-          <h3>Startup UW</h3>
-          <p>Maintain design and content of the website. Responsible for developing systems to make communication quick and easy.</p>
-        </div>
-        <div id="pro4" class="block">
-          <img src="/images/rise.jpg"/>
-          <h3>Rise of Virtualization</h3>
-          <p>Studied how the introduction of virtualization in industries and schools can benefit, while tackling data security, integrity and reliability issues.</p>
-        </div>
-        <div id="pro1" class="block">
-          <img src="/images/OTG.jpg"/>
-          <h3>USB: On The Go</h3>
-          <p>A small, low cost device which can be connected to your phone (usually Android or other open source systems) and use to link other USB powered devices.</p>
-        </div>
-        <div id="pro2" class="block">
-          <img src="/images/aaa.png"/>
-          <h3>AAA</h3>
-          <p>ABWA Alumni Association: Created and restored the website for the ABWA Alumni Association. Included a social network for all alumni.</p>
-        </div>
-        <div id="pro3" class="block">
-          <img src="/images/abmun.png"/>
-          <h3>ABWA ModelUN</h3>
-          <p>Handled the second revamp of the ABWA MUN website. Used the WordPress with HTML and JS to create interactive online forms and tables for the participants. </p>
-        </div>
-        <div id="pro4" class="block">
-          <img src="/images/interaa.png"/>
-          <h3>Interaa</h3>
-          <p>As a first project, revamped the website, included newsrooms and contact forms, for Interaa, a financial advisory and IT company based out of Mumbai India.</p>
-        </div>
-      </div>
        <script async="" src="//www.google-analytics.com/analytics.js"></script>
        <script>
         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
