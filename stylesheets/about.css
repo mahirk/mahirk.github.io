@@ -8,24 +8,74 @@
 #me{
   background: #fff;
   display: block;
-  padding: 2% 10%;
+  padding: 2% 0;
   margin: 2% 2%;
   font-family: 'Raleway', calibri;
   -webkit-border-radius: 10px;
   border-radius: 10px;
 }
+#me p {word-wrap: break-word; font-size: 15px;}
+
+#me p a {text-decoration: none; color: #f1c43f;}
+
+#resume{
+  display: block!important;
+  padding: 10px 7px;
+  bottom: 100px;
+  margin: 0 2%;
+  font-size: 15px!important;
+  float: right;
+  letter-spacing: 1px;
+  background: #27ae60;
+  color: #fff;
+  -webkit-border-radius: 10px;
+}
+#me .fa {
+  font-size: 20px;
+}
+
 #me div {
   display:inline-block;
-  width: 20%;
-  margin-right: 5%;
+  width: 27%;
+  margin: 2% 3%;
   text-align:center;
+  vertical-align: top;
 }
+
+.float-right{
+  float: right;
+}
+#me ul {
+  display: inline-block;
+  list-style-type: none;
+  -webkit-padding-start: 0px;
+}
+
+#me li {
+  padding: 5px;
+  font-size: 75%;
+  margin-bottom: 5px;
+  -webkit-border-radius: 5px;
+}
+
 #me h3{
   -webkit-margin-before: 0.2em;
+  font-size:20px;
+}
+canvas {
+  margin: 10px 0;
+  width: 30%!important;
+  height: auto!important;
+  padding-top: 2%;
 }
 .border{
   padding: 5px;
   background: #5B90BF;
   width: cover;
   display: block;
+}
+
+em {
+  font-weight: normal;
+  font-size: 15px;
 }

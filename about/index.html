@@ -11,6 +11,7 @@
     <link rel="icon" href="/images/transparent.png">
       <link rel="stylesheet" type="text/css" href="/stylesheets/font-awesome-4.2.0/css/font-awesome.css">
     <script src="/javascripts/respond.js"></script>
+    <script src="/javascripts/Chart.js"></script>
     <!--[if lt IE 9]>
       <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
@@ -49,21 +50,57 @@
           </div>
       </div>
       <div id="abouthead">
-        <h1>About Me</h1>
+        <h1>About Me <div id="resume"><i class="fa fa-file"></i> Resume</div></h1>
+
       </div>
+
       <span class="border"></span>
       <div id="me">
         <div>
           <i class="fa fa-graduation-cap"></i>
           <h3>Education<h3>
+            <p> I study at the <a href="http://uw.edu">University of Washington</a> and I am pursuing Computer Science with a minor in Entrepreneurship. Expected to graduate by 2017.</p>
         </div>
         <div>
           <i class="fa fa-graduation-cap"></i>
-          <h3>Education<h3>
+          <h3>Interests<h3>
+          <p> I love programming projects, with a focus on Web Development and Android Apps, and researching in IoT and BigData. Aside from that EDM, digital photography and attempts at writing reviews and stories, take up my time.</p>
         </div>
-        
-
+        <div>
+          <i class="fa fa-suitcase"></i>
+          <h3>Past<h3>
+          <p> I completed my high school (International Baccalaureate) from <a href="http://adityabirlaworldacademy.com">Aditya Birla World Academy</a>, Mumbai, India in 2014. I have been in Seattle ever since </p>
       </div>
+        <div style="width: 60%;">
+          <i class="fa fa-cogs"></i>
+          <h3>Skills<h3>
+            <span id="leg1"></span><canvas id="webs" ></canvas>
+            <canvas id="gen" ></canvas><span id="leg2"></span>
+        </div>
+        <div>
+          <i class="fa fa-certificate"></i>
+          <h3>Certifications<h3>
+            <p>Oracle Certified Associate Java SE 7 (1Z0- 803) <br>
+                Oracle University, License 26056588<p>
+        </div>
+        <div style="width: 94%; margin-bottom: 0;">
+        <i class="fa fa-folder-open"></i>
+        <h3>Activities<h3>
+        </div>
+        <div>
+          <h4><b>Dubhacks</b> | <em>Executive Organizer</em><h4>
+            <p>Part of the team that organized the Pacific Northwest’s first and largest collegiate <a href="http://dubhacks.co">hackathon</a>. Took charge of Mentor Relations, Volunteer Relations and Final Event Judging</p>
+        </div>
+        <div>
+          <h4><b>Startup UW</b> | <em>Technical and Finance Director</em><h4>
+            <p>Member of the Executive Board of <a href="http://startupuw.com">UW’s entrepreneurship club</a>, responsible for organizing events and providing startup assistance, maintaining the website and handling finances</p>
+        </div>
+        <div>
+          <h4><b>ASUW Senate</b> | <em>Senator</em><h4>
+            <p>Senator Representative for Mercer Court (Apartment Complex) representing general as well as student technology views.</p>
+        </div>
+      </div>
+      <script src="/javascripts/skills.js"></script>
        <script async="" src="//www.google-analytics.com/analytics.js"></script>
        <script>
         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
