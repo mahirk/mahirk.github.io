@@ -16,63 +16,63 @@ var dataSet1 = [
     {
         value: 150,
         color:"#F7464A",
-        highlight: "#FF5A5E",
+        highlight: "#bdc3c7",
         label: "Java"
     },
     {
         value: 150,
         color: "#46BFBD",
-        highlight: "#5AD3D1",
+        highlight: "#bdc3c7",
         label: "JavaScript"
     },
     {
         value: 100,
         color: "#8e44ad",
-        highlight: "#FFC870",
+        highlight: "#bdc3c7",
         label: "HTML5"
     },
     {
         value: 100,
         color: "#FDB45C",
-        highlight: "#FFC870",
+        highlight: "#bdc3c7",
         label: "CSS3"
     },
     {
         value: 100,
         color: "#f1c40f",
-        highlight: "#FFC870",
+        highlight: "#bdc3c7",
         label: "PHP"
     }
 ];
 var dataSet2 = [
     {
-        value: 300,
+        value: 40,
         color:"#c0391a",
-        highlight: "#e74c3c",
+        highlight: "#bdc3c7",
         label: "AngularJS"
     },
     {
-        value: 50,
+        value: 10,
         color: "#27ae60",
-        highlight: "#5AD3D1",
+        highlight: "#bdc3c7",
         label: "NodeJS"
     },
     {
-        value: 100,
+        value: 10,
         color: "#d35400",
-        highlight: "#FFC870",
+        highlight: "#bdc3c7",
         label: "Ruby (Rails)"
     },
     {
-        value: 100,
+        value: 15,
         color: "#3498db",
-        highlight: "#3498db",
+        highlight: "#bdc3c7",
         label: "Wordpress"
     },
     {
-        value: 100,
-        color: "#FDB45C",
-        highlight: "#FFC870",
-        label: "Hell"
+        value: 25,
+        color: "#A4C639",
+        highlight: "#bdc3c7",
+        label: "And. Prog."
     }
 ]
