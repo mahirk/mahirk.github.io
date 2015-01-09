@@ -12,6 +12,9 @@ body {
   #data img {
     float: none !important;
   }
+  #imageData {
+    display: none!important;
+  }
   #menu{
     margin-top: -160px!important;
     height:0px!important;
