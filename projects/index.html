@@ -53,20 +53,20 @@
         <h1>Projects</h1>
       </div>
       <div id="pjmain">
-        <tag data-filter="reset"><i class="fa fa-refresh"></i></tag>
-        <tag data-filter="web">Website</tag>
-        <tag data-filter="app">App</tag>
-        <tag data-filter="software">Software</tag>
-        <tag data-filter="hardware">Hardware</tag>
-        <tag data-filter="paper">Papers</tag>
-        <tag data-filter="fp">Personal Projects</tag>
+        <tag data-filter="reset" ng-click="clicked('')"><i class="fa fa-refresh"></i></tag>
+        <tag data-filter="web" ng-click="clicked('web')">Website</tag>
+        <tag data-filter="app" ng-click="clicked('app')">App</tag>
+        <tag data-filter="software" ng-click="clicked('software')">Software</tag>
+        <tag data-filter="hardware" ng-click="clicked('hardware')">Hardware</tag>
+        <tag data-filter="paper" ng-click="clicked('paper')">Papers</tag>
+        <tag data-filter="fp" ng-click="clicked('fp')">Personal Projects</tag>
       </div>
         <div id="projects">
-          <!--automate with Angular-->
-          <div class="block" ng-repeat="project in store.projects">
+          <div class="block" ng-repeat="project in store.projects | selectedType:typefilter" type="{{project.type}}" >
             <img ng-src="{{project.img}}"/>
             <h3>{{project.name}}</h3>
             <p>{{project.data}}</p>
+            <tag ng-repeat="type in project.type" data-filter="{{type}}">{{type | uppercase}}</tag>
           </div>
         </div>
        <script async="" src="//www.google-analytics.com/analytics.js"></script>
