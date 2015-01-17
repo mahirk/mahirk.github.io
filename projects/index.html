@@ -27,7 +27,10 @@
       }
     });
      $(document).scroll(function() {
-        $('#menu').toggleClass('state', $(document).scrollTop() < $('#menu').offset().top);
+      $('#menu').removeClass('state', $(document).scrollTop() < $('#menu').offset().top);
+        if( $(document).scrollTop() == 0){
+          $('#menu').addClass('state');
+        }
     });
 
     </script>
@@ -56,7 +59,7 @@
         <tag data-filter="reset" ng-click="clicked('')"><i class="fa fa-refresh"></i></tag>
         <tag data-filter="web" ng-click="clicked('web')">Website</tag>
         <tag data-filter="app" ng-click="clicked('app')">App</tag>
-        <tag data-filter="software" ng-click="clicked('software')">Software</tag>
+        <!-- <tag data-filter="software" ng-click="clicked('software')">Software</tag> -->
         <tag data-filter="hardware" ng-click="clicked('hardware')">Hardware</tag>
         <tag data-filter="paper" ng-click="clicked('paper')">Papers</tag>
         <tag data-filter="fp" ng-click="clicked('fp')">Personal Projects</tag>

@@ -37,7 +37,10 @@
       }
     });
     $(document).scroll(function() {
-       $('#menu').toggleClass('state', $(document).scrollTop() < $('#menu').offset().top);
+      $('#menu').removeClass('state', $(document).scrollTop() < $('#menu').offset().top);
+      if( $(document).scrollTop() == 0){
+        $('#menu').addClass('state');
+      }
    });
     </script>
   </head>
