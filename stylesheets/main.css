@@ -141,12 +141,12 @@ Top
   width: 100%;
 }
 #data {
-  margin-left: 2%;
+  margin-left: 20px;
 }
 h1 {
     color: #fff;
     padding-top:0.2em;
-    font-size: 7em;
+    font-size: 4em;
     display:inline-block;
     opacity: 1;
     font-weight: lighter!important;
@@ -155,6 +155,10 @@ h1 {
     font-family: 'Raleway', calibri;
     margin-top:0;
     letter-spacing: 7px;
+}
+
+#data h1{
+    font-size:7em!important;
 }
 
 h2 {
