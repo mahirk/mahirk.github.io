@@ -19,7 +19,9 @@ body {
   #data h1{
       font-size: 4em!important;
   }
-  
+  h1{
+      font-size: 4em!important;
+  }
   #imageData {
     display: none!important;
   }
