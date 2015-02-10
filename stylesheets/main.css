@@ -41,7 +41,7 @@ body {
     text-decoration: none;
   }
   #links{
-    font-size: 3em!important;
+    font-size: 2.5em!important;
   }
   #bio{
     letter-spacing: normal!important;
@@ -146,7 +146,7 @@ Top
 h1 {
     color: #fff;
     padding-top:0.2em;
-    font-size: 7em;
+    font-size: 4em;
     display:inline-block;
     opacity: 1;
     font-weight: lighter!important;
@@ -213,8 +213,8 @@ h2 {
 }
 
 #below{
-    margin-top: 2%;
     text-align:center;
+    margin-top: 2%;
 }
 
 #below h2,
@@ -234,6 +234,21 @@ h2 {
     font-weight:bold;
 }
 
+#bottom {
+  color: #fff;
+  margin-top: -25px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.fa-heart{
+  color: #C0392B;
+  font-size: 30px;
+}
+
+#top h1 {
+  font-size: 7em;
+}
 /******************************
 Projects
 ******************************/
@@ -305,19 +320,19 @@ tag:hover {
 }
 
 tag[data-filter = "paper"] {
-    background-color: #31B404;
+    background-color: #27AE60;
 }
 
 tag[data-filter = "app"] {
-    background-color: #FF8000;
+    background-color: #E67E22;
 }
 
 tag[data-filter = "web"] {
-    background-color: #B40431;
+    background-color: #C0392B;
 }
 
 tag[data-filter = "hardware"] {
-    background-color: #02A7DE;
+    background-color: #3498DB;
 }
 
 tag[data-filter = "software"] {
@@ -325,7 +340,7 @@ tag[data-filter = "software"] {
 }
 
 tag[data-filter = "fp"] {
-    background-color: #333;
+    background-color: #34495E;
 }
 
 /******************************************
