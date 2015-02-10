@@ -15,7 +15,7 @@ body {
   #top, h1, h2 {
     text-align: center!important;
   }
-  
+
   #data h1{
       font-size: 4em!important;
   }
@@ -247,7 +247,6 @@ h2 {
 
 #bottom {
   color: #fff;
-  margin-top: -25px;
   text-align: center;
   font-weight: bold;
 }
