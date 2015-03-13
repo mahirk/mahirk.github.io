@@ -52,7 +52,7 @@
           <a href="#" id="close" onclick="$('#menu').removeClass('state')"><i class="fa fa-level-up"></i></i></a>
           <ul>
               <a href="/"><li><i class="fa fa-home"></i> Home</li></a>
-              <a href="/works/"><li><i class="fa fa-folder"></i> works</li></a>
+              <a href="/projects/"><li><i class="fa fa-folder"></i> Projects</li></a>
               <a href="/work/"><li><i class="fa fa-users"></i> Work</li></a>
               <a href="/about/"><li><i class="fa fa-database"></i> About</li></a>
           </ul>
@@ -68,11 +68,11 @@
       </div>
       <div id="workex">
         <div id="projects">
-          <div class="block" ng-repeat="work in store.works" type="{{work.type}}" >
+          <div class="block" style="margin: 0px;" ng-repeat="work in store.works" type="{{work.type}}" >
             <img style="width: 45%;" ng-src="{{work.asset.media}}"/>
             <h3>{{work.headline}}</h3>
             <p ng-bind-html="work.text | unsafe"> </p> <br\>
-            <div><b>{{work.startDate | date:'MM/dd/yyyy'}} to {{work.endDate | date:'MM/dd/yyyy'}}</b></div>
+            <div><b>{{work.startDate | dateSplit }} to {{work.endDate | dateSplit }}</b></div>
           </div>
         </div>
       </div>

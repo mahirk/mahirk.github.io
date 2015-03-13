@@ -10,6 +10,14 @@
         };
   });
 
+  app.filter('dateSplit', function() {
+        return function(val) {
+          var split = val.split(',');
+          var months = ["Jan", "Feb", "Mar", "Apr", "May", "June", "July", "Aug", "Sep"];
+            return months[split[1]-1] + " " + split[2] + ", " + split[0];
+        };
+  });
+
 
   app.controller('StoreController', function(){
    this.works = details;
