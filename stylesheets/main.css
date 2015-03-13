@@ -397,3 +397,7 @@ blockquote.first{
 .media {
   vertical-align: middle;
 }
+
+.hide {
+  display: none;
+}
