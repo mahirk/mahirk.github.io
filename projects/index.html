@@ -65,7 +65,7 @@
         <tag data-filter="fp" ng-click="clicked('fp')">Personal Projects</tag>
       </div>
         <div id="projects">
-          <div class="block" ng-repeat="project in store.projects | selectedType:typefilter" type="{{project.type}}" >
+          <div class="block" ng-repeat="project in store.projects | selectedType:typefilter" type="{{project.type}}" onclick="window.location = {{project.link}}">
             <img ng-src="{{project.img}}"/>
             <h3>{{project.name}}</h3>
             <p>{{project.data}}</p>
