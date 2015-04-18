@@ -65,12 +65,14 @@
         <tag data-filter="fp" ng-click="clicked('fp')">Personal Projects</tag>
       </div>
         <div id="projects">
-          <div class="block" ng-repeat="project in store.projects | selectedType:typefilter" type="{{project.type}}" onclick="window.location = {{project.link}}">
-            <img ng-src="{{project.img}}"/>
-            <h3>{{project.name}}</h3>
-            <p>{{project.data}}</p>
-            <tag ng-repeat="type in project.type" data-filter="{{type}}">{{type | uppercase}}</tag>
-          </div>
+          <a href="{{project.link}}" ng-repeat="project in store.projects | selectedType:typefilter" target="_project" >
+            <div class="block" type="{{project.type}}">
+              <img ng-src="{{project.img}}"/>
+              <h3>{{project.name}}</h3>
+              <p>{{project.data}}</p>
+              <tag ng-repeat="type in project.type" data-filter="{{type}}">{{type | uppercase}}</tag>
+            </div>
+          </a>
         </div>
        <script async="" src="//www.google-analytics.com/analytics.js"></script>
        <script>

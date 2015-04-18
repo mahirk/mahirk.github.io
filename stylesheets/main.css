@@ -296,6 +296,7 @@ Projects
   text-align:center;
   display: inline-block;
   color: #fff;
+  vertical-align: top;
 }
 .block img {
   height: 80%;
