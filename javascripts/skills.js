@@ -14,31 +14,31 @@ window.onload = function(){
 
 var dataSet1 = [
     {
-        value: 150,
+        value: 25,
         color:"#F7464A",
         highlight: "#bdc3c7",
         label: "Java"
     },
     {
-        value: 150,
+        value: 25,
         color: "#46BFBD",
         highlight: "#bdc3c7",
         label: "JavaScript"
     },
     {
-        value: 100,
+        value: 20,
         color: "#8e44ad",
         highlight: "#bdc3c7",
         label: "HTML5"
     },
     {
-        value: 100,
+        value: 20,
         color: "#FDB45C",
         highlight: "#bdc3c7",
         label: "CSS3"
     },
     {
-        value: 100,
+        value: 10,
         color: "#f1c40f",
         highlight: "#bdc3c7",
         label: "PHP"
