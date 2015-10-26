@@ -52,25 +52,19 @@ var dataSet2 = [
         label: "AngularJS"
     },
     {
-        value: 10,
+        value: 35,
         color: "#27ae60",
         highlight: "#bdc3c7",
         label: "NodeJS"
     },
     {
         value: 10,
-        color: "#d35400",
+        color: "#3498db",
         highlight: "#bdc3c7",
-        label: "Ruby (Rails)"
+        label: "Ruby on Rails"
     },
     {
         value: 15,
-        color: "#3498db",
-        highlight: "#bdc3c7",
-        label: "Wordpress"
-    },
-    {
-        value: 25,
         color: "#A4C639",
         highlight: "#bdc3c7",
         label: "And. Prog."
