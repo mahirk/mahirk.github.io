@@ -21,18 +21,21 @@
   });
 
   app.controller('StoreController', function($scope){
-   this.projects = details;
+   $scope.projects = details;
    $scope.typefilter = '';
    $scope.clicked = function(type){
      $scope.typefilter = type;
-   }
+   };
+   $scope.selected = {
+     item: $scope.projects[0]
+   };
   });
 
   var details = [
-    { name: 'AuTix', img: '/images/autix.png', data: 'Android Developer. Created a promotional treasure hunt application for store owners based on Maps API. Placed in the top 5 at Angel Hack Seattle'  , type: ['fp', 'app'], link:"https://github.com/mahirk/autixdev"},
+    { name: 'AuTix', img: '/images/autix.png', data: 'Android Developer. Created a promotional treasure hunt application for store owners based on Maps API. Placed in the top 5 at Angel Hack Seattle'  , type: [ 'app'], link:"https://github.com/mahirk/autixdev"},
     { name: 'Chowdown', img: '/images/Chowdown.png', data: 'Helps control the quantum of ‘Husky’ money spent on food by providing quarterly estimates. Built a Parse Backend with JS and (partially) Ruby on Rails ' , type:['web', 'app'], link:"https://github.com/mahirk/chowdown" },
-    { name: 'Pathify', img: '/images/pathify.jpg', data: 'A supplement to general advising, based on selected categories and majors, it provides data on them. Used JS to create the selection algorithm.', type:['fp', 'web','app'] , link:"https://github.com/mahirk/pathify" },
-    { name: 'Devour Catering', img: '/images/devour.png', data: 'Developed website for Mumbai based catering company, Devour. Using AngularJS to generate dynamic and easy access to the various menus.'  , type: ['fp', 'web'], link:"http://devourcatering.co"},
+    { name: 'Pathify', img: '/images/pathify.jpg', data: 'A supplement to general advising, based on selected categories and majors, it provides data on them. Used JS to create the selection algorithm.', type:[ 'web','app'] , link:"https://github.com/mahirk/pathify" },
+    { name: 'Devour Catering', img: '/images/devour.png', data: 'Developed website for Mumbai based catering company, Devour. Using AngularJS to generate dynamic and easy access to the various menus.'  , type: [ 'web'], link:"http://devourcatering.co"},
     { name: 'HackerCollective', img: '/images/hc.png', data: 'Part of a team accumulating all programming resources for developers. Responsible for organzing and writing data for Android, JS and Chrome Ext.' , type:['fp'], link:"http://bit.ly/hackcol" },
     { name: 'CatLyft', img: '/images/catlyft.png', data: 'An app which can be used to rent cats in the area, charged per rental w/ PAWS Shelter i.e. Lyft for Cats (Learning Project for CodeDay 2014)' , type:['app'], link:"https://github.com/mahirk/CatLyft" },
     { name: 'Fine \'Linnen\' Company', img: '/images/flc.jpeg', data: 'Revamped according to designs provided; used SEO optimization to increase page hits. Increased sales and compliments noted.' , type:['web'] , link:"http://flc.co.in"},
