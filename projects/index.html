@@ -70,6 +70,7 @@
           <div class="block" type="{{project.type}}">
               <img ng-src="{{project.img}}"/>
               <h3>{{project.name}}</h3>
+              <div id="mobileData">{{project.data}}</div>
               <tag ng-repeat="type in project.type" data-filter="{{type}}">{{type | uppercase}}</tag>
           </div>
         </div>

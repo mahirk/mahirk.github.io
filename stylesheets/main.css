@@ -9,49 +9,39 @@ body {
 }
 
 @media only screen and (min-width : 320px) and (max-width : 768px) {
-  #data img {
-    float: none !important;
+
+  #menu h1 {
+    display: block!important;
+    text-align: center;
   }
-  #top, h1, h2 {
-    text-align: center!important;
+  #menu {
+    display: block!important;
+  }
+  #menu ul {
+    width: 100%!important;
+    -webkit-padding-start: 0px!important;
+    justify-content: center!important;
   }
 
-  #data h1{
-      font-size: 4em!important;
-  }
-  h1{
-      font-size: 4em!important;
-  }
-  #imageData {
+  #projectData {
     display: none!important;
   }
-  #menu{
-    margin-top: -160px!important;
-    height:0px!important;
-  }
-  .block {
+
+  #mobileData {
     display: block!important;
-    width: 100%!important;
-    margin-top: 50px!important;
   }
-  #menu.state{
-    height: 180px!important;
-    top: 150px!important;
+
+  .companyImg {
+    display: none!important;
   }
-  #menu ul li{
-    display:block!important;
+
+  #workDetails > p {
+    width: 90%!important;
+    text-align: left!important;
   }
-  #menu ul{
-    margin-right:40px;
-  }
-  #menu a {
-    text-decoration: none;
-  }
-  #links{
-    font-size: 2.5em!important;
-  }
-  #bio{
-    letter-spacing: normal!important;
+
+  #workBox {
+    width:90%!important;
   }
 }
 /*************
@@ -207,6 +197,10 @@ Projects
   text-align:center;
 }
 
+#mobileData {
+  display: none;
+}
+
 
 #projectData {
   border: 2px solid #909090;
@@ -234,7 +228,7 @@ Projects
   height: 100%;
   margin-left: 2%;
   word-wrap: normal;
-  width: 75%;
+  width: 70%;
 }
 
 #projectDetails > tag:hover {

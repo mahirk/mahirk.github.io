@@ -49,7 +49,7 @@
           <h2>{{selected.item.headline}}</h2><img class="companyImg" ng-src="{{selected.item.asset.media}}" />
           <div class="title">{{selected.item.title}}</div>
           <div>{{selected.item.team}}</div>
-          <div>{{selected.item.location}} | {{selected.item.startDate | dateSplit}} - {{selected.item.endDate | dateSplit}}</div>
+          <div>{{selected.item.location}} </div> <div>{{selected.item.startDate | dateSplit}} - {{selected.item.endDate | dateSplit}}</div>
           <p ng-bind-html="selected.item.text | unsafe"> </p>
         </div>
       </div>
