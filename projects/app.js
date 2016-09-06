@@ -43,7 +43,7 @@
     { name: 'Rise of Virtualization', img: '/images/rise.jpg', data: 'Studied how the introduction of virtualization in industries and schools can benefit, while tackling data security, integrity and reliability issues.' , type:['paper'], link:"#" },
     { name: 'USB: On The Go', img: '/images/OTG.jpg', data: 'A small, low cost device which can be connected to your phone (usually Android or other open source systems) and use to link other USB powered devices.', type:['hardware'] , link:"#" },
     { name: 'AAA', img: '/images/aaa.png', data: 'ABWA Alumni Association: Created and restored the website for the ABWA Alumni Association. Included a social network for all alumni.' , type:['web'], link:"http://abwaalumni.com" },
-    { name: 'ABWA ModelUN', img: '/images/abmun.png', data: 'Handled the second revamp of the ABWA MUN website. Used the WordPress with HTML and JS to create interactive online forms and tables for the participants.', type:['web'] , link:"#" },
+    { name: 'ABWA ModelUN', img: '/images/abmun.png', data: 'Used the second revamp of the ABWA MUN website. Used WordPress + HTML/JS to create interactive online forms and tables for the participants.', type:['web'] , link:"#" },
     { name: 'Interaa', img: '/images/interaa.png', data: 'As a first project, revamped the website, included newsrooms and contact forms, for Interaa, a financial advisory and IT company based out of Mumbai India.' , type:['web' ], link:"http://interaa.in"},
   ];
 })();

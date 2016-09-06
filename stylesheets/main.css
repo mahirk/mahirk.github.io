@@ -234,7 +234,7 @@ Projects
   height: 100%;
   margin-left: 2%;
   word-wrap: normal;
-  width: 70%;
+  width: 75%;
 }
 
 #projectDetails > tag:hover {
@@ -262,6 +262,7 @@ Projects
   display: inline-block;
   color: #000;
   vertical-align: top;
+  cursor: pointer;
 }
 .block img {
   height: 80%;
@@ -355,10 +356,20 @@ Work
   height: 100%;
 }
 
+.companyImg {
+  width: 30%;
+  float: right;
+  margin: 3%;
+}
+
 #workDetails {
   height: 100%;
   width: 62%;
   float: right;
+}
+
+#workDetails h2 {
+  display: inline-block;
 }
 
 #workList > div {
@@ -389,6 +400,7 @@ Work
 
 #workDetails > p {
   margin-right: 5%;
+  width: 60%;
   text-align: justify;
 }
 

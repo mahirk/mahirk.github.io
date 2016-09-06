@@ -100,7 +100,7 @@
     {
       "startDate":"2012,6,7",
       "endDate":"2012,6,30",
-      "headline":"Datamatics Global Services Limited",
+      "headline":"Datamatics Global Services",
       "location": "Mumbai, India",
       "title": "Consulting and Developing Intern",
       "text":"Completed a course in learning Android programming alongside the ‘Sencha’ Platform, as well as iOS application programming, and applied them successfully in the assignments given. Assisted in designing and mobile enabling an e-Process Manager with a single sign on for Android, iOS and BB-OS devices.",
