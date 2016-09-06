@@ -11,7 +11,7 @@
     <link href='/stylesheets/timeline.css' rel='stylesheet' type='text/css'>
 
       <link rel="stylesheet" type="text/css" href="/stylesheets/font-awesome-4.2.0/css/font-awesome.css">
-      <script type="text/javascript" src="http://cdn.knightlab.com/libs/timeline/latest/js/storyjs-embed.js"></script>
+      <!-- <script type="text/javascript" src="http://cdn.knightlab.com/libs/timeline/latest/js/storyjs-embed.js"></script> -->
     <script src="/javascripts/respond.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.8/angular.min.js"></script>
   <script src="work.js"></script>
@@ -22,62 +22,57 @@
     <link rel="stylesheet" href="stylesheets/ie.css">
     <![endif]-->
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <script>
-    $(document).ready(function sizer(){
-      var size = $(window).width();
-      if (size > 768) {
-          $('#menu').addClass('state');
-          createStoryJS({
-              type:       'timeline',
-              width:      '800',
-              height:     '450',
-              start_zoom_adjust:  '0',
-              font: 'BreeSerif-OpenSans',
-              source:     'timeline.json',
-              embed_id:   'workex'
-          });
-          $('#projects').addClass('hide');
-      }
-    });
-    $(document).scroll(function() {
-      $('#menu').removeClass('state', $(document).scrollTop() < $('#menu').offset().top);
-      if( $(document).scrollTop() == 0){
-        $('#menu').addClass('state');
-      }
-   });
-    </script>
   </head>
   <body id="prjectpage" ng-controller="StoreController as store">
-      <div id="menu">
-          <a href="#" id="close" onclick="$('#menu').removeClass('state')"><i class="fa fa-level-up"></i></i></a>
-          <ul>
-              <a href="/"><li><i class="fa fa-home"></i> Home</li></a>
-              <a href="/projects/"><li><i class="fa fa-folder"></i> Projects</li></a>
-              <a href="/work/"><li><i class="fa fa-users"></i> Work</li></a>
-              <a href="/about/"><li><i class="fa fa-database"></i> About</li></a>
-          </ul>
-      </div>
-       <div id="topper">
-          <div id="header">
-                  <a href="mailto:mahirk@cs.uw.edu"><i class="fa fa-envelope"></i></a>
-                  <a href="#" onclick="$('#menu').addClass('state')" id="menuopen"><i class="fa fa-th-large"></i><br/>Menu</a>
-          </div>
-      </div>
+    <div id="menu">
+      <h1><b>M</b>AHIR <b>K</b>OTHARY</h1>
+      <ul>
+          <a href="/"><li>Home</li></a>
+          <a href="/projects/"><li>Projects</li></a>
+          <a href="/work/"><li>Work</li></a>
+          <a href="/about/"><li>About</li></a>
+          <a href="/blog/"><li>Blog</li></a>
+      </ul>
+    </div>
       <div id="workhead">
-        <h1>Work</h1>
+        <h1>Work Experience</h1>
       </div>
-      <div id="workex">
-        <div id="projects">
-          <div class="block" style="margin: 0px;" ng-repeat="work in store.works" type="{{work.type}}" >
-            <img style="width: 45%;" ng-src="{{work.asset.media}}"/>
-            <h3>{{work.headline}}</h3>
-            <p ng-bind-html="work.text | unsafe"> </p> <br\>
-            <div><b>{{work.startDate | dateSplit }} to {{work.endDate | dateSplit }}</b></div>
+
+      <div id="workBox">
+        <div id="workList">
+          <div ng-repeat="work in works" ng-click="selected.item = (work)">
+            <div><b>{{work.headline}}</b> <em>{{work.location}}</em></div>
+            {{work.title}}
           </div>
+        </div>
+        <div id="workDetails">
+          <h2>{{selected.item.headline}}</h2><img class="companyImg" ng-src="{{selected.item.asset.media}}" />
+          <div class="title">{{selected.item.title}}</div>
+          <div>{{selected.item.team}}</div>
+          <div>{{selected.item.location}} </div> <div>{{selected.item.startDate | dateSplit}} - {{selected.item.endDate | dateSplit}}</div>
+          <p ng-bind-html="selected.item.text | unsafe"> </p>
         </div>
       </div>
 
-       <script async="" src="//www.google-analytics.com/analytics.js"></script>
+      <div id="footer">
+        <div id="links">
+            <a href="http://github.com/mahirk" onclick="ga('send', 'event', 'social', 'click', 'Git')" target="_git"><i type="git" class="fa fa-2x fa-github-square" ></i></a>
+            <a href="http://facebook.com/mahir.kothary"  onclick="ga('send', 'event', 'social', 'click', 'FB')" target="_fb"><i type="fb" class="fa fa-2x fa-facebook-square"></i></a>
+            <a href="http://twitter.com/mahirk95" onclick="ga('send', 'event', 'social', 'click', 'twit')" target="_twit"><i type="twit" class="fa fa-2x fa-twitter-square"></i></a>
+            <a href="http://linkedin.com/in/mahirkothary/" onclick="ga('send', 'event', 'social', 'click', 'linked')" target="_linked"><i type="linkedin" class="fa fa-2x fa-linkedin-square" onclick=""></i></a>
+        </div>
+        <div class="logo">
+          <svg width="84px" height="37px" viewBox="1268 31 84 37" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+              <defs></defs>
+              <text id="M-|-K" stroke="none" fill="none" font-family="Copperplate" font-size="36" font-weight="normal">
+                  <tspan x="1268.024" y="59" fill="#FFFFFF">M | K</tspan>
+              </text>
+          </svg>
+        </div>
+      </div>
+
+
+       <!-- <script async="" src="//www.google-analytics.com/analytics.js"></script>
        <script>
         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
         (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -87,7 +82,7 @@
         ga('create', 'UA-49776246-1', 'auto');
         ga('send', 'pageview');
 
-</script>
+        </script> -->
 
   </body>
 </html>
