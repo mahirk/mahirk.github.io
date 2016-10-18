@@ -12,18 +12,15 @@
 }
 
 #about {
-  background: url('/images/bg4.svg');
   height: 100%;
 }
-#abouthead{
-  background: rgba(0,0,0,0.4);
-}
+
 #me{
   background: #fff;
   display: block;
   padding: 2% 0;
   margin: 2% 2%;
-  font-family: 'Raleway', calibri;
+  font-family: 'Avenir Next', calibri;
   -webkit-border-radius: 10px;
   border-radius: 10px;
 }
