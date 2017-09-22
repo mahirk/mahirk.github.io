@@ -62,6 +62,10 @@ Top
   width: 50%;
 }
 
+#menu a {
+  text-decoration: none;
+}
+
 #menu ul a {
   margin: auto 3%;
   text-decoration: none;
