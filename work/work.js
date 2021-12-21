@@ -31,12 +31,12 @@
 
     var details = [
         {
-            "startDate":"2020,7,7",
+            "startDate":"2020,8,7",
             "endDate":"2021,7,7",
             "headline":"HBO",
-            "title": "Staff Software Engineer, Direct Commerce and Subscriber Lifecycle\nSr Software Engineer, Direct Commerce and Subscriber Lifecycl",
+            "title": "Staff Software Engineer<br/>Sr Software Engineer, Direct Commerce and Subscriber Lifecycle",
             "location": "Seattle, WA",
-            "text":"Lead cross team feature crews for the international expansion of HBO Commerce Services into LATAM and EU.\nDesigned multi-stack architectures to create the first in house credit card processing and billing system.\nDeveloped internal tooling to help the organization make the move to using OpenAPI for build and testing systems",
+            "text":"Lead cross team feature crews for the international expansion of HBO Commerce Services into LATAM and EU.<br/>Designed multi-stack architectures to create the first in house credit card processing and billing system.<br/>Developed internal tooling to help the organization make the move to using OpenAPI for build and testing systems",
             "asset":
             {
                 "media":"/images/hbo.png",
@@ -50,7 +50,7 @@
             "headline":"HBO",
             "title": "Software Engineer II,  Direct Commerce ",
             "location": "Seattle, WA",
-            "text":"Lead a small team over a span of 2 months to design and reestablish an end to end commerce system using Stripe.\nDeveloped systems to interact with existing third party commerce solutions and built accompanying financial tooling.\nDesign and execute large scale load testing for commerce services to enable subscriber signups for Game of Thrones.\nUtilized SQL and Python to generate data visualizations for data-driven system and product improvements",
+            "text":"Lead a small team over a span of 2 months to design and reestablish an end to end commerce system using Stripe.<br/>Developed systems to interact with existing third party commerce solutions and built accompanying financial tooling.<br/>Design and execute large scale load testing for commerce services to enable subscriber signups for Game of Thrones.<br/>Utilized SQL and Python to generate data visualizations for data-driven system and product improvements",
             "asset":
             {
                 "media":"/images/hbo.png",
