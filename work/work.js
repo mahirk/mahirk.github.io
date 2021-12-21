@@ -31,8 +31,8 @@
 
     var details = [
         {
-            "startDate":"2020,8,7",
-            "endDate":"2021,7,7",
+            "startDate":"2020,7,7",
+            "endDate":"2021,8,7",
             "headline":"HBO",
             "title": "Staff Software Engineer / Sr Software Engineer, Direct Commerce and Subscriber Lifecycle",
             "location": "Seattle, WA",
