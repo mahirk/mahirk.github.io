@@ -34,7 +34,7 @@
             "startDate":"2020,8,7",
             "endDate":"2021,7,7",
             "headline":"HBO",
-            "title": "Staff Software Engineer<br/>Sr Software Engineer, Direct Commerce and Subscriber Lifecycle",
+            "title": "Staff Software Engineer / Sr Software Engineer, Direct Commerce and Subscriber Lifecycle",
             "location": "Seattle, WA",
             "text":"Lead cross team feature crews for the international expansion of HBO Commerce Services into LATAM and EU.<br/>Designed multi-stack architectures to create the first in house credit card processing and billing system.<br/>Developed internal tooling to help the organization make the move to using OpenAPI for build and testing systems",
             "asset":
