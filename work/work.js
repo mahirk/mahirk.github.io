@@ -31,10 +31,38 @@
 
     var details = [
         {
-            "startDate":"2017,8,7",
-            "endDate":"Present",
+            "startDate":"2020,7,7",
+            "endDate":"2021,7,7",
             "headline":"HBO",
-            "title": "Staff Engineer I",
+            "title": "Staff Software Engineer, Direct Commerce and Subscriber Lifecycle\nSr Software Engineer, Direct Commerce and Subscriber Lifecycl",
+            "location": "Seattle, WA",
+            "text":"Lead cross team feature crews for the international expansion of HBO Commerce Services into LATAM and EU.\nDesigned multi-stack architectures to create the first in house credit card processing and billing system.\nDeveloped internal tooling to help the organization make the move to using OpenAPI for build and testing systems",
+            "asset":
+            {
+                "media":"/images/hbo.png",
+                "thumbnail":"/images/hbothumb.png",
+                "caption":"HBO"
+            }
+        },
+        {
+            "startDate":"2018,7,7",
+            "endDate":"2020,7,7",
+            "headline":"HBO",
+            "title": "Software Engineer II,  Direct Commerce ",
+            "location": "Seattle, WA",
+            "text":"Lead a small team over a span of 2 months to design and reestablish an end to end commerce system using Stripe.\nDeveloped systems to interact with existing third party commerce solutions and built accompanying financial tooling.\nDesign and execute large scale load testing for commerce services to enable subscriber signups for Game of Thrones.\nUtilized SQL and Python to generate data visualizations for data-driven system and product improvements",
+            "asset":
+            {
+                "media":"/images/hbo.png",
+                "thumbnail":"/images/hbothumb.png",
+                "caption":"HBO"
+            }
+        },
+        {
+            "startDate":"2017,8,7",
+            "endDate":"2018,7,7",
+            "headline":"HBO",
+            "title": "Software Engineer I, In App Commerce ",
             "location": "Seattle, WA",
             "text":"Working on backend services with the Purchase and Identity team, focussing on interaction with payment providers, billing databases and testing.",
             "asset":
