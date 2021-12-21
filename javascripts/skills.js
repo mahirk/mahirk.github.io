@@ -14,42 +14,30 @@ window.onload = function(){
 
 var dataSet1 = [
     {
-        value: 25,
+        value: 40,
         color:"#F7464A",
         highlight: "#bdc3c7",
-        label: "Java"
+        label: "Typescript"
+    },
+    {
+        value: 35,
+        color: "#46BFBD",
+        highlight: "#bdc3c7",
+        label: "Golang"
     },
     {
         value: 25,
-        color: "#46BFBD",
-        highlight: "#bdc3c7",
-        label: "JavaScript"
-    },
-    {
-        value: 20,
         color: "#8e44ad",
         highlight: "#bdc3c7",
-        label: "HTML5"
-    },
-    {
-        value: 20,
-        color: "#FDB45C",
-        highlight: "#bdc3c7",
-        label: "CSS3"
-    },
-    {
-        value: 10,
-        color: "#f1c40f",
-        highlight: "#bdc3c7",
-        label: "PHP"
+        label: "Python"
     }
 ];
 var dataSet2 = [
     {
-        value: 40,
+        value: 30,
         color:"#c0391a",
         highlight: "#bdc3c7",
-        label: "AngularJS"
+        label: "React"
     },
     {
         value: 35,
@@ -64,9 +52,9 @@ var dataSet2 = [
         label: "Ruby on Rails"
     },
     {
-        value: 15,
+        value: 25,
         color: "#A4C639",
         highlight: "#bdc3c7",
-        label: "And. Prog."
+        label: "SQL"
     }
 ]
