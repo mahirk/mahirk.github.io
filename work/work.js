@@ -32,6 +32,7 @@
     var details = [
         {
             "startDate":"2022,7,11",
+            "endDate":"",
             "headline":"Stripe",
             "title": "Software Engineer, Terminal Traffic",
             "location": "New York, NY",
@@ -49,7 +50,7 @@
             "headline":"HBO",
             "title": "Staff Software Engineer, Subscriber Lifecycle",
             "location": "Seattle, WA",
-            "text":"Lead cross team feature crews for the international expansion of HBO Commerce Services into LATAM and EU.<br/>.<br/>Architected plans and led prototyping for internal tooling to help the organization make the move to using OpenAPI for build and testing systems",
+            "text":"Lead cross team feature crews for the international expansion of HBO Commerce Services into LATAM and EU.<br/>Designed systems to enable rule-based and multi-plan purchasing options for US and international experiences.<br/>Architected plans and led prototyping for internal tooling to help the organization make the move to using OpenAPI for build and testing systems",
             "asset":
             {
                 "media":"/images/hbo.png",
