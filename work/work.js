@@ -32,7 +32,7 @@
     var details = [
         {
             "startDate":"2022,7,11",
-            "endDate":"",
+            "endDate":"Present",
             "headline":"Stripe",
             "title": "Software Engineer, Terminal Traffic",
             "location": "New York, NY",
