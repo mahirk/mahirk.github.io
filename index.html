@@ -4,56 +4,390 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
     <title>Mahir Kothary</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-    <link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
-    <link rel="icon" href="images/transparent.png">
-    <link rel="stylesheet" href="stylesheets/main.css">
-      <link rel="stylesheet" type="text/css" href="stylesheets/font-awesome-4.2.0/css/font-awesome.css">
-    <script src="javascripts/respond.js"></script>
-    <!--[if lt IE 9]>
-      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-    <!--[if lt IE 8]>
-    <link rel="stylesheet" href="stylesheets/ie.css">
-    <![endif]-->
+    <link href='https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap' rel='stylesheet' type='text/css'>
+    <link rel="icon" href="assets/images/transparent.png">
+    <link rel="stylesheet" type="text/css" href="stylesheets/font-awesome-4.2.0/css/font-awesome.css">
+    <script src="assets/js/data.js"></script>
+    <script src="assets/js/utils.js"></script>
+    <script src="assets/js/timeline.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <style>
+      :root {
+        --bg-primary: #0d1117;
+        --bg-secondary: #161b22;
+        --text-primary: #e6edf3;
+        --text-secondary: #7d8590;
+        --accent: #58a6ff;
+        --accent-hover: #79c0ff;
+        --border: #30363d;
+      }
 
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+        background: var(--bg-primary);
+        color: var(--text-primary);
+        line-height: 1.6;
+        font-size: 16px;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 2rem;
+      }
+
+      .header {
+        text-align: center;
+        margin-bottom: 3rem;
+      }
+
+      .header h1 {
+        font-size: 2.5rem;
+        font-weight: 600;
+        margin-bottom: 0.5rem;
+      }
+
+      .header .nav {
+        margin-top: 1.5rem;
+      }
+
+      .header .nav a {
+        color: var(--text-secondary);
+        text-decoration: none;
+        margin: 0 1rem;
+        font-weight: 400;
+        transition: color 0.2s;
+      }
+
+      .header .nav a:hover {
+        color: var(--accent);
+      }
+
+      .profile {
+        text-align: center;
+        margin-bottom: 3rem;
+      }
+
+      .profile img {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        margin-bottom: 1.5rem;
+        border: 3px solid var(--border);
+      }
+
+      .intro {
+        margin-bottom: 3rem;
+      }
+
+      .intro h2 {
+        font-size: 1.5rem;
+        font-weight: 500;
+        margin-bottom: 1rem;
+      }
+
+      .intro p {
+        color: var(--text-primary);
+        line-height: 1.7;
+        font-size: 1rem;
+      }
+
+      .intro a {
+        color: var(--accent);
+        text-decoration: none;
+        font-weight: 500;
+      }
+
+      .intro a:hover {
+        color: var(--accent-hover);
+        text-decoration: underline;
+      }
+
+      .timeline-section {
+        margin-bottom: 3rem;
+      }
+
+      .timeline-section h2 {
+        font-size: 1.5rem;
+        font-weight: 500;
+        margin-bottom: 2rem;
+      }
+
+      .timeline {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 2rem;
+        padding: 3rem 0;
+        max-width: 100%;
+        overflow-x: auto;
+        min-height: 200px;
+      }
+
+      .timeline::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 5%;
+        right: 5%;
+        height: 2px;
+        background: var(--border);
+        z-index: 0;
+        transform: translateY(-50%);
+      }
+
+      .timeline-item {
+        position: relative;
+        flex: 1;
+        min-width: 250px;
+        text-align: center;
+        z-index: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .timeline-marker {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 16px;
+        height: 16px;
+        background: var(--accent);
+        border-radius: 50%;
+        border: 3px solid var(--bg-primary);
+        z-index: 2;
+        box-shadow: 0 0 0 3px var(--border);
+      }
+
+      .timeline-content-above {
+        text-align: center;
+        margin-bottom: 2rem;
+        order: -1;
+      }
+
+      .timeline-content-below {
+        text-align: center;
+        margin-top: 2rem;
+        order: 1;
+      }
+
+      .timeline-date {
+        color: var(--accent);
+        font-weight: 600;
+        font-size: 0.9rem;
+        margin-bottom: 0.5rem;
+        background: var(--bg-primary);
+        padding: 0.25rem 0.5rem;
+        border-radius: 4px;
+        display: inline-block;
+      }
+
+      .timeline-title {
+        color: var(--text-primary);
+        font-weight: 600;
+        margin-bottom: 0.5rem;
+        font-size: 1rem;
+        line-height: 1.3;
+        margin-top: 1rem;
+      }
+
+      .timeline-org {
+        color: var(--text-secondary);
+        font-size: 0.9rem;
+        line-height: 1.4;
+      }
+
+      .timeline-org a {
+        color: var(--accent);
+        text-decoration: none;
+        font-weight: 500;
+      }
+
+      .timeline-org a:hover {
+        color: var(--accent-hover);
+        text-decoration: underline;
+      }
+
+      /* Mobile responsive */
+      @media (max-width: 768px) {
+        .timeline {
+          flex-direction: column;
+          gap: 2rem;
+          align-items: center;
+          padding: 2rem 1rem;
+        }
+
+        .timeline::before {
+          top: 0;
+          left: 50%;
+          right: auto;
+          width: 2px;
+          height: 100%;
+          transform: translateX(-50%);
+        }
+
+        .timeline-item {
+          min-width: auto;
+          width: 100%;
+          max-width: 300px;
+          flex-direction: row;
+          text-align: left;
+          align-items: flex-start;
+          padding-left: 3rem;
+        }
+
+        .timeline-item::before {
+          top: 1rem;
+          left: -1rem;
+          transform: translate(-50%, 0);
+          position: absolute;
+        }
+
+        .timeline-content {
+          align-items: flex-start;
+          padding-bottom: 0;
+        }
+
+        .timeline-date {
+          margin-bottom: 0.5rem;
+        }
+
+        .timeline-title {
+          margin-top: 0;
+          text-align: left;
+        }
+
+        .timeline-org {
+          text-align: left;
+        }
+      }
+
+      .personal {
+        margin-bottom: 3rem;
+      }
+
+      .personal h2 {
+        font-size: 1.5rem;
+        font-weight: 500;
+        margin-bottom: 1rem;
+      }
+
+      .personal p {
+        color: var(--text-primary);
+        line-height: 1.7;
+        font-size: 1rem;
+      }
+
+      .personal a {
+        color: var(--accent);
+        text-decoration: none;
+        font-weight: 500;
+      }
+
+      .personal a:hover {
+        color: var(--accent-hover);
+        text-decoration: underline;
+      }
+
+      .social-links {
+        text-align: center;
+        margin-top: 2rem;
+      }
+
+      .social-links a {
+        color: var(--text-secondary);
+        font-size: 2rem;
+        margin: 0 1rem;
+        transition: color 0.2s;
+      }
+
+      .social-links a:hover {
+        color: var(--accent);
+      }
+
+      @media (max-width: 768px) {
+        .container {
+          padding: 1rem;
+        }
+        
+        .header h1 {
+          font-size: 2rem;
+        }
+        
+        .header .nav a {
+          margin: 0 0.5rem;
+          font-size: 0.9rem;
+        }
+        
+        .profile img {
+          width: 120px;
+          height: 120px;
+        }
+        
+        .timeline {
+          padding-left: 1.5rem;
+        }
+        
+        .timeline-item {
+          padding-left: 1.5rem;
+        }
+      }
+    </style>
   </head>
   <body>
-      <div id="menu">
-        <h1><b>M</b>AHIR <b>K</b>OTHARY</h1>
-        <ul>
-            <a href="/"><li>Home</li></a>
-            <a href="/work/"><li>Work</li></a>
-            <a href="/about/"><li>About</li></a>
-            <a href="/blog/" target="_blog"><li>Blog</li></a>
-            <a href="/resume/" target="_resume"><li>Resume</li></a>
-        </ul>
+    <div class="container">
+      <header class="header">
+        <h1>MAHIR KOTHARY</h1>
+        <nav class="nav">
+          <a href="/">Home</a>
+          <a href="/work/">Experiences</a>
+          <a href="/about/">About</a>
+          <a href="/blog/" target="_blog">Blog</a>
+          <a href="/resume/" target="_resume">Resume</a>
+        </nav>
+      </header>
+
+      <div class="profile">
+        <img src="assets/images/mahir.jpg" alt="Mahir Kothary"/>
       </div>
-       <div id="topper">
-          <div id="top">
-            <img src="images/mahir.jpg"/>
-          </div>
-	        <div id="bio">
-            <h2>A little bit about me.</h2>
-            <p>
-            I am an incoming software engineer at Stripe. Prior to this, I was a Staff Software Engineer at HBO working on HBO Now and <a href="https://hbomax.com" target="_blank">HBO Max</a> Commerce and Billing Services. I completed my Master of Engineering at Cornell Tech in 2022 and my Bachelor's in Computer Science, with a minor in Entrepreneurship, at the University of Washington (UW), Seattle in 2017.
-            During my time at UW I interned at <a href="https://hbo.com">HBO</a>, <a href="http://shippable.com" target="_blank">Shippable</a>, VMware and IBM. During my time at UW I was an Executive Organizer for <a href="https://dubhacks.co" target="_blank">DubHacks</a>, Vice Chair for  <a href="https://www.cs.washington.edu/acm/" target="_blank">UW-ACM</a> and Co-President, <a href="https://startupuw.com">StartupUW</a>.
-            My passions lie in <a href="https://medium.com/mahirk" target="_blank" >writing</a>, cooking and <a href="/photography" target="_blank">digital photography</a>, where I blend creativity, art and technology. In our spare time, my fiancè and I enjoy hikes and are very passionate about animal rescue and have had the pleasure of <a href="/adventures">fostering several dogs</a>. Feel free to reach out to me at mk@mahirk.com
-            </p>
-          </div>
 
-            <div id="links">
-                <a href="http://github.com/mahirk"  target="_git"><i type="git" class="fa fa-3x fa-github fa-fw" ></i></a>
-                <a href="http://twitter.com/mahirk95"  target="_twit"><i type="twit" class="fa fa-3x fa-twitter fa-fw"></i></a>
-                <a href="http://linkedin.com/in/mahirkothary/"  target="_linked"><i type="linkedin" class="fa fa-3x fa-linkedin fa-fw" onclick=""></i></a>
-            </div>
+      <section class="intro">
+        <h2>A little bit about me.</h2>
+        <p>
+          I am a software engineer at <a href="https://stripe.com" target="_blank">Stripe</a> working on Terminal Traffic. Prior to this, I was a Staff Software Engineer at HBO working on HBO Now and <a href="https://hbomax.com" target="_blank">HBO Max</a> Commerce and Billing Services.
+        </p>
+      </section>
 
+      <section class="timeline-section">
+        <h2>Career & Education</h2>
+        <div class="timeline" id="main-timeline">
+          <!-- Timeline will be populated by JavaScript -->
+        </div>
+      </section>
 
-       </div>
+      <section class="personal">
+        <h2>Personal Interests</h2>
+        <p>
+          My passions lie in <a href="https://medium.com/mahirk" target="_blank">writing</a>, cooking and <a href="/photography" target="_blank">digital photography</a>, where I blend creativity, art and technology. In our spare time, my fiancé and I enjoy hikes and are very passionate about animal rescue and have had the pleasure of <a href="/adventures">fostering several dogs</a>. Feel free to reach out to me at mk@mahirk.com
+        </p>
+      </section>
 
-</script>
-
+      <div class="social-links">
+        <a href="http://github.com/mahirk" target="_git"><i class="fa fa-github"></i></a>
+        <a href="http://twitter.com/mahirk95" target="_twit"><i class="fa fa-twitter"></i></a>
+        <a href="http://linkedin.com/in/mahirkothary/" target="_linked"><i class="fa fa-linkedin"></i></a>
+      </div>
+    </div>
 
   </body>
 </html>
