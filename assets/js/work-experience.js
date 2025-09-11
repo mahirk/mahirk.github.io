@@ -48,6 +48,24 @@
         }]);
 
         /**
+         * Filter to format text content (handles both arrays and strings)
+         */
+        app.filter('formatText', ['$sce', function($sce) {
+            return function(val) {
+                if (!val) return '';
+                
+                // If it's an array, join with <p> tags
+                if (Array.isArray(val)) {
+                    const paragraphs = val.map(line => `<p>${line}</p>`).join('');
+                    return $sce.trustAsHtml(paragraphs);
+                }
+                
+                // If it's a string, wrap in <p> tag
+                return $sce.trustAsHtml(`<p>${val}</p>`);
+            };
+        }]);
+
+        /**
          * Filter to format dates from "YYYY,M,D" format
          */
         app.filter('dateSplit', function() {

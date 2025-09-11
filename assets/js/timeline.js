@@ -30,11 +30,39 @@ class TimelineRenderer {
         // Clear existing content
         this.container.innerHTML = '';
 
+        // Create timeline line as DOM element
+        this.createTimelineLine();
+
         // Render each timeline item
-        this.data.forEach(item => {
+        this.data.forEach((item, index) => {
             const timelineItem = this.createTimelineItem(item);
+            // Add most-recent class to the first item (most recent)
+            if (index === 0) {
+                timelineItem.classList.add('most-recent');
+            }
             this.container.appendChild(timelineItem);
         });
+    }
+
+    /**
+     * Create timeline line and markers as DOM elements
+     */
+    createTimelineLine() {
+        const timelineLine = DOMUtils.createElement('div', 'timeline-line');
+        const marker = DOMUtils.createElement('div', 'timeline-marker-dot');
+        marker.classList.add('most-recent');
+        timelineLine.appendChild(marker);
+        // Create desktop arrow positioned absolutely within timeline
+        const desktopArrow = DOMUtils.createElement('div', 'timeline-arrow');
+        desktopArrow.innerHTML = `
+            <a href="/work/" class="timeline-arrow-link">
+                <i class="fa fa-arrow-right"></i>
+            </a>
+        `;
+
+        timelineLine.appendChild(desktopArrow);
+
+        this.container.appendChild(timelineLine);
     }
 
     /**
@@ -44,6 +72,14 @@ class TimelineRenderer {
      */
     createTimelineItem(item) {
         const timelineItem = DOMUtils.createElement('div', 'timeline-item');
+        
+        // Add type-based CSS class for color highlighting
+        if (item.type) {
+            timelineItem.classList.add(item.type);
+        } else {
+            // Default to 'work' if no type specified
+            timelineItem.classList.add('work');
+        }
         
         const dateRange = DateUtils.formatDateRange(item.startDate, item.endDate);
         const orgText = this.formatOrganizationText(item);
@@ -83,6 +119,23 @@ class TimelineRenderer {
         }
         return item.headline + location;
     }
+
+    /**
+     * Add navigation elements (arrow for desktop, button for mobile)
+     */
+    addNavigationElements() {        
+        // Create mobile button
+        const mobileButton = DOMUtils.createElement('div', 'timeline-mobile-button');
+        mobileButton.innerHTML = `
+            <a href="/work/" class="timeline-button">
+                View All Experiences
+            </a>
+        `;
+        
+        // Add arrow inside timeline container, button after timeline
+        this.container.appendChild(desktopArrow);
+        this.container.parentNode.appendChild(mobileButton);
+    }
 }
 
 // Initialize timeline when DOM is ready
@@ -100,6 +153,7 @@ DOMUtils.ready(() => {
         
         const recentExperiences = sortedExperiences.slice(0, 3);
         timeline.setData(recentExperiences).render();
+        timeline.addNavigationElements();
     } else {
         console.warn('Work details data not found. Make sure data.js is loaded before timeline.js');
     }

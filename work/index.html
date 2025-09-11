@@ -136,11 +136,32 @@
       }
 
       .timeline-marker.education {
-        background: #10b981;
+        background: #7c3aed;
+        box-shadow: 0 0 0 4px rgba(124, 58, 237, 0.2);
       }
 
       .timeline-marker.leadership {
-        background: #8b5cf6;
+        background: #f59e0b;
+        box-shadow: 0 0 0 4px rgba(245, 158, 11, 0.2);
+      }
+
+      /* Content box color highlighting */
+      .timeline-content.work {
+        border-color: rgba(88, 166, 255, 0.3);
+        border-width: 4px;
+        background: linear-gradient(135deg, var(--bg-secondary) 0%, rgba(88, 166, 255, 0.05) 100%);
+      }
+
+      .timeline-content.education {
+        border-color: rgba(124, 58, 237, 0.3);
+        border-width: 4px;
+        background: linear-gradient(135deg, var(--bg-secondary) 0%, rgba(124, 58, 237, 0.05) 100%);
+      }
+
+      .timeline-content.leadership {
+        border-color: rgba(245, 158, 11, 0.3);
+        border-width: 4px;
+        background: linear-gradient(135deg, var(--bg-secondary) 0%, rgba(245, 158, 11, 0.05) 100%);
       }
 
       .timeline-content {
@@ -151,11 +172,6 @@
         position: relative;
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
         transition: all 0.3s ease;
-      }
-
-      .timeline-content:hover {
-        border-color: var(--accent);
-        box-shadow: 0 8px 25px rgba(88, 166, 255, 0.15);
       }
 
       .timeline-content::before {
@@ -391,7 +407,7 @@
               'fa-users': work.type === 'leadership'
             }"></i>
           </div>
-          <div class="timeline-content">
+          <div class="timeline-content" ng-class="work.type || 'work'">
             <div class="timeline-header">
               <h3 class="timeline-company">{{work.headline}}</h3>
               <img class="timeline-logo" ng-src="{{work.asset.media}}" alt="{{work.headline}} logo" />
@@ -402,7 +418,7 @@
               <span class="timeline-dates">{{work.startDate | dateSplit}} - {{work.endDate | dateSplit}}</span>
             </div>
             <div class="timeline-description" ng-show="work.text">
-              <div ng-bind-html="work.text | unsafe"></div>
+              <div ng-bind-html="work.text | formatText"></div>
             </div>
           </div>
         </div>
