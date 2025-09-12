@@ -1,11 +1,11 @@
 body {
     width: 100%;
     font-family: 'Raleway', calibri;
-    background: #fff;
+    background: #1a1a1a;
+    color: #f7fafc;
     overflow-x:hidden;
     margin: 0;
     height:100%;
-    background-color:rgba(0, 0, 0,0);
 }
 
 @media only screen and (min-width : 320px) and (max-width : 768px) {
@@ -69,21 +69,21 @@ Top
 #menu ul a {
   margin: auto 3%;
   text-decoration: none;
-  color: #333;
+  color: #f7fafc;
   border-bottom: 2px solid transparent;
   transition: all ease-in-out 0.5s;
 }
 
 #menu ul a:hover {
-  border-color: #333;
+  border-color: #f7fafc;
 }
 
 #menu ul a:visited {
-  color: #333;
+  color: #f7fafc;
 }
 
 #menu h1 {
-  color: #333333;
+  color: #f7fafc;
   font-size: 24px;
   font-weight: 400;
   display: inline;
@@ -120,14 +120,14 @@ Top
 
 #bio p a {
   text-decoration: none;
-  color: #000;
+  color: #60a5fa;
   border-bottom: 2px solid transparent;
   transition: all ease-in-out 0.5s;
   font-weight: bold;
 }
 
 #bio p a:hover {
-  border-color: #333;
+  border-color: #60a5fa;
 }
 
 #links {
@@ -136,7 +136,7 @@ Top
 
 #links a {
   margin: auto 1%;
-  color: #000;
+  color: #f7fafc;
   text-decoration: none;
 }
 
@@ -346,77 +346,158 @@ tag[data-filter = "fp"] {
 
 
 /******************************************
-Work
+Timeline Work Experience
 ******************************************/
 
-#workBox {
+#timeline {
+  max-width: 800px;
   margin: 5% auto;
-  width:70%;
-  background: #FFFFFF;
-  border: 1px solid #909090;
-  height: 450px;
-  border-radius: 3px;
+  position: relative;
+  padding: 2rem 0;
 }
 
-#workBox > div {
-  display: inline-block;
-  overflow-y: scroll;
-  font-family: Avenir Next;
-}
-
-#workList {
-  background: #EDEDED;
-  width: 35%;
-  border-right: 1px solid #909090;
+#timeline::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2px;
   height: 100%;
+  background: #4a5568;
+  top: 0;
 }
 
-.companyImg {
-  width: 30%;
-  float: right;
-  margin: 3%;
+.timeline-item {
+  position: relative;
+  margin: 2rem 0;
+  width: 100%;
 }
 
-#workDetails {
-  height: 100%;
-  width: 62%;
-  float: right;
+.timeline-item:nth-child(odd) .timeline-content {
+  margin-left: 0;
+  margin-right: 52%;
+  text-align: right;
 }
 
-#workDetails h2 {
-  display: inline-block;
+.timeline-item:nth-child(even) .timeline-content {
+  margin-left: 52%;
+  margin-right: 0;
+  text-align: left;
 }
 
-#workList > div {
-  background: #FFFFFF;
-  border: 1px solid #979797;
-  margin: 2%;
-  width: 90%;
-  border-radius: 3px;
-  padding: 2%;
-  cursor: pointer;
+.timeline-marker {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 16px;
+  height: 16px;
+  background: #60a5fa;
+  border: 3px solid #1a1a1a;
+  border-radius: 50%;
+  z-index: 1;
 }
 
-#workList em {
-  font-weight: 300;
+.timeline-content {
+  background: #2d3748;
+  border: 1px solid #4a5568;
+  border-radius: 8px;
+  padding: 1.5rem;
+  position: relative;
 }
 
-#workDetails .title {
-  font-family: Avenir Next;
-  font-style: italic;
+.timeline-content::before {
+  content: '';
+  position: absolute;
+  top: 20px;
+  width: 0;
+  height: 0;
+  border: 10px solid transparent;
+}
+
+.timeline-item:nth-child(odd) .timeline-content::before {
+  right: -20px;
+  border-left-color: #4a5568;
+}
+
+.timeline-item:nth-child(even) .timeline-content::before {
+  left: -20px;
+  border-right-color: #4a5568;
+}
+
+.timeline-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.timeline-header h3 {
+  margin: 0;
+  color: #60a5fa;
+  font-size: 1.25rem;
   font-weight: 600;
 }
 
-#workDetails > div {
-  font-family: Avenir Next;
-  font-style: italic;
-  font-weight: 300;
+.company-logo {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  border-radius: 4px;
 }
 
-#workDetails > p {
-  margin-right: 5%;
-  width: 60%;
-  text-align: justify;
+.timeline-title {
+  font-weight: 600;
+  color: #f7fafc;
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+}
+
+.timeline-meta {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  font-size: 0.875rem;
+  color: #cbd5e0;
+}
+
+.timeline-description {
+  color: #e2e8f0;
+  line-height: 1.6;
+}
+
+.timeline-description a {
+  color: #60a5fa;
+  text-decoration: none;
+}
+
+.timeline-description a:hover {
+  text-decoration: underline;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  #timeline::before {
+    left: 20px;
+  }
+  
+  .timeline-item:nth-child(odd) .timeline-content,
+  .timeline-item:nth-child(even) .timeline-content {
+    margin-left: 50px;
+    margin-right: 0;
+    text-align: left;
+  }
+  
+  .timeline-marker {
+    left: 20px;
+  }
+  
+  .timeline-item:nth-child(odd) .timeline-content::before,
+  .timeline-item:nth-child(even) .timeline-content::before {
+    left: -20px;
+    right: auto;
+    border-right-color: #4a5568;
+    border-left-color: transparent;
+  }
 }
 
 /******************************************

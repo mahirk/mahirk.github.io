@@ -4,56 +4,59 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
     <title>Mahir Kothary</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-    <link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
-    <link rel="icon" href="images/transparent.png">
-    <link rel="stylesheet" href="stylesheets/main.css">
-      <link rel="stylesheet" type="text/css" href="stylesheets/font-awesome-4.2.0/css/font-awesome.css">
-    <script src="javascripts/respond.js"></script>
-    <!--[if lt IE 9]>
-      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-    <!--[if lt IE 8]>
-    <link rel="stylesheet" href="stylesheets/ie.css">
-    <![endif]-->
+    <link href='https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap' rel='stylesheet' type='text/css'>
+    <link rel="icon" href="assets/images/transparent.png">
+    <link rel="stylesheet" type="text/css" href="assets/stylesheets/font-awesome-4.2.0/css/font-awesome.css">
+    <link rel="stylesheet" type="text/css" href="assets/stylesheets/style.css">
+    <script src="assets/js/data.js"></script>
+    <script src="assets/js/utils.js"></script>
+    <script src="assets/js/timeline.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-
   </head>
   <body>
-      <div id="menu">
-        <h1><b>M</b>AHIR <b>K</b>OTHARY</h1>
-        <ul>
-            <a href="/"><li>Home</li></a>
-            <a href="/work/"><li>Work</li></a>
-            <a href="/about/"><li>About</li></a>
-            <a href="/blog/" target="_blog"><li>Blog</li></a>
-            <a href="/resume/" target="_resume"><li>Resume</li></a>
-        </ul>
+    <div class="container">
+      <header class="header">
+        <h1>MAHIR KOTHARY</h1>
+        <nav class="nav">
+          <a href="/">Home</a>
+          <a href="/work/">Experiences</a>
+          <a href="/about/">About</a>
+          <a href="/blog/" target="_blog">Blog</a>
+          <a href="/resume/" target="_resume">Resume</a>
+        </nav>
+      </header>
+
+      <div class="profile">
+        <img src="assets/images/mahir.jpg" alt="Mahir Kothary"/>
       </div>
-       <div id="topper">
-          <div id="top">
-            <img src="images/mahir.jpg"/>
-          </div>
-	        <div id="bio">
-            <h2>A little bit about me.</h2>
-            <p>
-            I am an incoming software engineer at Stripe. Prior to this, I was a Staff Software Engineer at HBO working on HBO Now and <a href="https://hbomax.com" target="_blank">HBO Max</a> Commerce and Billing Services. I completed my Master of Engineering at Cornell Tech in 2022 and my Bachelor's in Computer Science, with a minor in Entrepreneurship, at the University of Washington (UW), Seattle in 2017.
-            During my time at UW I interned at <a href="https://hbo.com">HBO</a>, <a href="http://shippable.com" target="_blank">Shippable</a>, VMware and IBM. During my time at UW I was an Executive Organizer for <a href="https://dubhacks.co" target="_blank">DubHacks</a>, Vice Chair for  <a href="https://www.cs.washington.edu/acm/" target="_blank">UW-ACM</a> and Co-President, <a href="https://startupuw.com">StartupUW</a>.
-            My passions lie in <a href="https://medium.com/mahirk" target="_blank" >writing</a>, cooking and <a href="/photography" target="_blank">digital photography</a>, where I blend creativity, art and technology. In our spare time, my fiancè and I enjoy hikes and are very passionate about animal rescue and have had the pleasure of <a href="/adventures">fostering several dogs</a>. Feel free to reach out to me at mk@mahirk.com
-            </p>
-          </div>
 
-            <div id="links">
-                <a href="http://github.com/mahirk"  target="_git"><i type="git" class="fa fa-3x fa-github fa-fw" ></i></a>
-                <a href="http://twitter.com/mahirk95"  target="_twit"><i type="twit" class="fa fa-3x fa-twitter fa-fw"></i></a>
-                <a href="http://linkedin.com/in/mahirkothary/"  target="_linked"><i type="linkedin" class="fa fa-3x fa-linkedin fa-fw" onclick=""></i></a>
-            </div>
+      <section class="intro">
+        <h2>A little bit about me.</h2>
+        <p>
+          I am a software engineer at <a href="https://stripe.com" target="_blank">Stripe</a> working on Terminal. Prior to this, I was a Staff Software Engineer at HBO working on HBO Now and <a href="https://hbomax.com" target="_blank">HBO Max</a> Commerce and Billing Services.
+        </p>
+      </section>
 
+      <section class="timeline-section">
+        <h2>Experiences</h2>
+        <div class="timeline" id="main-timeline">
+          <!-- Timeline will be populated by JavaScript -->
+        </div>
+      </section>
 
-       </div>
+      <section class="personal">
+        <h2>Personal Interests</h2>
+        <p>
+          My passions lie in <a href="https://medium.com/mahirk" target="_blank">writing</a>, cooking and <a href="/photography" target="_blank">digital photography</a>, where I blend creativity, art and technology. In our spare time, my fiancé and I enjoy hikes and are very passionate about animal rescue and have had the pleasure of <a href="/adventures">fostering several dogs</a>. Feel free to reach out to me at mk@mahirk.com
+        </p>
+      </section>
 
-</script>
-
+      <div class="social-links">
+        <a href="http://github.com/mahirk" target="_git"><i class="fa fa-github"></i></a>
+        <a href="http://twitter.com/mahirk95" target="_twit"><i class="fa fa-twitter"></i></a>
+        <a href="http://linkedin.com/in/mahirkothary/" target="_linked"><i class="fa fa-linkedin"></i></a>
+      </div>
+    </div>
 
   </body>
 </html>

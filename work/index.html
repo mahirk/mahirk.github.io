@@ -3,73 +3,68 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>Work Experiences</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-    <link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
-    <link rel="icon" href="/images/transparent.png">
-    <link rel="stylesheet" href="/stylesheets/main.css">
-    <link href='/stylesheets/timeline.css' rel='stylesheet' type='text/css'>
-  <link rel="stylesheet" type="text/css" href="/stylesheets/font-awesome-4.2.0/css/font-awesome.css">
-  <!-- <script type="text/javascript" src="http://cdn.knightlab.com/libs/timeline/latest/js/storyjs-embed.js"></script> -->
-    <script src="/javascripts/respond.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.8/angular.min.js"></script>
-  <script src="work.js"></script>
-    <!--[if lt IE 9]>
-      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-    <!--[if lt IE 8]>
-    <link rel="stylesheet" href="stylesheets/ie.css">
-    <![endif]-->
+    <title>Experiences - Mahir Kothary</title>
+    <link href='https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap' rel='stylesheet' type='text/css'>
+    <link rel="icon" href="/assets/images/transparent.png">
+    <link rel="stylesheet" type="text/css" href="/assets/stylesheets/font-awesome-4.2.0/css/font-awesome.css">
+    <link rel="stylesheet" type="text/css" href="/assets/stylesheets/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.8/angular.min.js"></script>
+    <script src="/assets/js/data.js"></script>
+    <script src="/assets/js/utils.js"></script>
+    <script src="/assets/js/work-experience.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
   </head>
-  <body id="prjectpage" ng-controller="StoreController as store">
-    <div id="menu">
-      <a href="/"><h1><b>M</b>AHIR <b>K</b>OTHARY</h1></a>
-      <ul>
-          <a href="/"><li>Home</li></a>
+  <body ng-controller="StoreController as store">
+    <div class="container">
+      <header class="header">
+        <h1>MAHIR KOTHARY</h1>
+        <nav class="nav">
+          <a href="/">Home</a>
+          <a href="/work/">Experiences</a>
+          <a href="/about/">About</a>
+          <a href="/blog/" target="_blog">Blog</a>
+          <a href="/resume/" target="_resume">Resume</a>
+        </nav>
+      </header>
 
-          <a href="/work/"><li>Work</li></a>
-          <a href="/about/"><li>About</li></a>
-          <a href="/blog/" target="_blog"><li>Blog</li></a>
-          <a href="/resume/" target="_resume"><li>Resume</li></a>
-      </ul>
-    </div>
-      <div id="workhead">
-        <h1>Work Experience</h1>
+      <div class="page-title">
+        <h2>Experiences</h2>
       </div>
 
-      <div id="workBox">
-        <div id="workList">
-          <div ng-repeat="work in works" ng-click="selected.item = (work)">
-            <div><b>{{work.headline}}</b> <em>{{work.location}}</em></div>
-            {{work.title}}
+      <div class="timeline work-timeline">
+        <div class="timeline-item" ng-repeat="work in experiences">
+          <div class="timeline-marker" ng-class="work.type">
+            <i class="fa" ng-class="{
+              'fa-briefcase': work.type === 'work',
+              'fa-graduation-cap': work.type === 'education', 
+              'fa-users': work.type === 'leadership'
+            }"></i>
+          </div>
+          <div class="timeline-content" ng-class="work.type || 'work'">
+            <div class="timeline-header">
+              <h3 class="timeline-company">{{work.headline}}</h3>
+              <img class="timeline-logo" ng-src="{{work.asset.media}}" alt="{{work.headline}} logo" />
+            </div>
+            <div class="timeline-title">{{work.title}}</div>
+            <div class="timeline-meta">
+              <span class="timeline-location">{{work.location}}</span>
+              <span class="timeline-dates">{{work.startDate | dateSplit}} - {{work.endDate | dateSplit}}</span>
+            </div>
+            <div class="timeline-description" ng-show="work.text">
+              <div ng-bind-html="work.text | formatText"></div>
+            </div>
           </div>
         </div>
-        <div id="workDetails">
-          <h2>{{selected.item.headline}}</h2><img class="companyImg" ng-src="{{selected.item.asset.media}}" />
-          <div class="title">{{selected.item.title}}</div>
-          <div>{{selected.item.team}}</div>
-          <div>{{selected.item.location}} </div> <div>{{selected.item.startDate | dateSplit}} - {{selected.item.endDate | dateSplit}}</div>
-          <p ng-bind-html="selected.item.text | unsafe"> </p>
-        </div>
       </div>
 
-      <div id="footer">
-        <div id="links">
-            <a href="http://github.com/mahirk"  target="_git"><i type="git" class="fa fa-2x fa-github-square" ></i></a>
-            <a href="http://twitter.com/mahirk95"  target="_twit"><i type="twit" class="fa fa-2x fa-twitter-square"></i></a>
-            <a href="http://linkedin.com/in/mahirkothary/"  target="_linked"><i type="linkedin" class="fa fa-2x fa-linkedin-square" onclick=""></i></a>
-            <a href="mailto:mk@mahirk.com">mk@mahirk.com</a>
+      <footer class="footer">
+        <div class="social-links">
+          <a href="https://github.com/mahirk" target="_git"><i class="fa fa-github"></i></a>
+          <a href="https://twitter.com/mahirk95" target="_twit"><i class="fa fa-twitter"></i></a>
+          <a href="https://linkedin.com/in/mahirkothary/" target="_linked"><i class="fa fa-linkedin"></i></a>
         </div>
-        <div class="logo">
-          <svg width="84px" height="37px" viewBox="1268 31 84 37" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-              <defs></defs>
-              <text id="M-|-K" stroke="none" fill="none" font-family="Copperplate" font-size="36" font-weight="normal">
-                  <tspan x="1268.024" y="59" fill="#FFFFFF">M | K</tspan>
-              </text>
-          </svg>
-        </div>
-      </div>
-
+        <a href="mailto:mk@mahirk.com" class="email-link">mk@mahirk.com</a>
+      </footer>
+    </div>
   </body>
 </html>
