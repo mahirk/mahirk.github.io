@@ -73,14 +73,6 @@ class TimelineRenderer {
     createTimelineItem(item) {
         const timelineItem = DOMUtils.createElement('div', 'timeline-item');
         
-        // Add type-based CSS class for color highlighting
-        if (item.type) {
-            timelineItem.classList.add(item.type);
-        } else {
-            // Default to 'work' if no type specified
-            timelineItem.classList.add('work');
-        }
-        
         const dateRange = DateUtils.formatDateRange(item.startDate, item.endDate);
         const orgText = this.formatOrganizationText(item);
         
